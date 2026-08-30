@@ -1,6 +1,10 @@
 # nix-config
 
-my messy nixOS config/dotfiles
+migrated from codeberg
+
+my LESS messy nixOS config/dotfiles
+
+
 
 <img src="showcase.png" />
 
