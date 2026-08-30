@@ -1,0 +1,23 @@
+positon = "Top"
+layer = "Top"
+
+[appearance]
+font_name = "Hack"
+base = "#f5Bde6"
+text = "#1e2030"
+workspace_colors = [ "#75bde6", "#9ece6a" ]
+
+[appearance.background_color]
+base = "#24273a"
+text = "#cad3f5" 
+
+[animations]
+enabled = true
+
+[window_title]
+mode = "Class"
+
+[modules]
+left = [ [ "Workspaces", "SystemInfo" ] ]
+center = [ "WindowTitle" ]
+right = [ [ "Tempo", "Privacy", "Settings" ] ]

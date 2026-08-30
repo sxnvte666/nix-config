@@ -1,0 +1,30 @@
+general.import = [
+  "~/.config/alacritty/catppuccin-macchiato.toml"
+]
+
+[window.padding]
+x = 14
+y = 14
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font"
+
+[font]
+size = 14
+
+[cursor]
+style = {shape = "Beam"}
+
+# tylko na forku alacritty z smooth cursorem - nie chce mi sie kompilowac ;(
+#smooth_motion = true
+#smooth_motion_factor = 0.85
+#block_replace_shape = "beam"

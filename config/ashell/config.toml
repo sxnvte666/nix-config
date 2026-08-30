@@ -1,0 +1,28 @@
+position = "Top"
+layer = "Top"
+
+[modules]
+left = [ [ "Workspaces", "SystemInfo" ] ]
+center = [ [ "WindowTitle" ] ]
+right = [ [ "Tempo", "Privacy", "Settings" ] ]
+
+[window_title]
+mode = "Class"
+
+[animations]
+enabled = true
+
+[appearance]
+font_name = "Hack"
+primary_color = "#f5bde6"
+text_color = "#cad3f5"
+workspace_colors = [ "#f5bde6" ]
+
+[settings]
+peripheral_battery_format = "Icon"
+
+[appearance.background_color]
+base = "#24273a"
+weak = "#363a4f"
+strong = "#494d64"
+text = "#cad3f5"
