@@ -74,4 +74,12 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+(defun my/nixconfig ()
+(interactive)
+(dired "~/nix-config/"))
 
+(setq doom-theme 'catppuccin)
+(setq catppuccin-flavor 'macchiato)
+;; (catppuccin-reload)
+
+(setq display-line-numbers-type 'relative)
