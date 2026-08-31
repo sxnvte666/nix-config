@@ -7,7 +7,6 @@
     pkgs.dconf-editor
     pkgs.unzip
     pkgs.fastfetch
-    # pkgs.pfetch
     pkgs.dracula-icon-theme
     pkgs.adwaita-icon-theme
     pkgs.gnome-themes-extra
@@ -55,5 +54,6 @@
     pkgs.qbittorrent
     pkgs.fzf
     pkgs.ripgrep
+    pkgs.fd
   ];
 }
