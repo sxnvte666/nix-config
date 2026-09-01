@@ -4,7 +4,8 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
     areofyl-fetch.url = "github:areofyl/fetch";
-    zen-browser = { 
+    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
+    zen-browser = {
     	url = "github:youwen5/zen-browser-flake";
 	    inputs.nixpkgs.follows = "nixpkgs";
      };
@@ -18,10 +19,11 @@
     };
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
+  outputs = { self, nixpkgs, nix-cachyos-kernel, ... }@inputs: {
     # use "nixos", or your hostname as the name of the configuration
     # it's a better practice than "default" shown in the video
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
       specialArgs = {inherit inputs;};
       modules = [
         ./configuration.nix

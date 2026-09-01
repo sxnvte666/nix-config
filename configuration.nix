@@ -10,6 +10,11 @@
       inputs.home-manager.nixosModules.default
     ];
 
+  # adding overlay for cachyos kernel
+  nixpkgs.overlays = [
+    inputs.nix-cachyos-kernel.overlays.pinned
+  ];
+
   # graphics drivers
   hardware.graphics = {
     enable = true;
@@ -27,7 +32,7 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
-  system.nixos.label = "default-kernel-debloat";
+  system.nixos.label = "cachyos-kernel";
 
   # bootloader
   boot.loader.systemd-boot.enable = false;
@@ -35,7 +40,11 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # kernel selection
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  # standard kernel
+  #boot.kernelPackages = pkgs.linuxPackages_latest;
+
+  # cachyos kernel
+  boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest;
 
   networking.hostName = "nixos"; 
 
@@ -74,7 +83,11 @@
     max-jobs = 1;
   };
 
-  zramSwap.enable = true;
+  zramSwap = {
+    enable = true;
+    memoryPrecent = 100;
+  };
+
   programs.ccache.enable = true;
 
   fonts.fontconfig.defaultFonts = {
