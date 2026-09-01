@@ -68,6 +68,15 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  # settings for compiling (kernel the most)
+  nix.settings = {
+    cores = 0; # use all cores
+    max-jobs = 1;
+  };
+
+  zramSwap.enable = true;
+  programs.ccache.enable = true;
+
   fonts.fontconfig.defaultFonts = {
   	serif = [ "JetBrainsMono Nerd Font" ];
 	  sansSerif = [ "JetBrainsMono Nerd Font" ];
