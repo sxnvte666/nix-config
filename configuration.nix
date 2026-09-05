@@ -85,7 +85,7 @@
 
   zramSwap = {
     enable = true;
-    memoryPrecent = 100;
+    memoryPercent = 100;
   };
 
   programs.ccache.enable = true;

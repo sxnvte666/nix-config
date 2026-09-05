@@ -37,7 +37,8 @@
       # dotnet
       dr = "dotnet run";
       ds = "dotnet-repl";
-      };
+      dnbuild = "dotnet publish -r linux-x64 p:PublishAot=true -c Release";
+     };
 
     oh-my-zsh = {
       enable = true;

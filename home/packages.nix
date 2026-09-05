@@ -43,6 +43,8 @@
     pkgs.nodejs
     pkgs.dotnet-sdk_10
     pkgs.dotnet-runtime_10
+    # pkgs.gcc
+    pkgs.clang
     pkgs.dotnet-repl
     pkgs.zoxide
     pkgs.prismlauncher
